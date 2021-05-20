@@ -15,3 +15,7 @@ add-apt-repository 'deb http://archive.getdeb.net/ubuntu wily-getdeb games'
 
 # Create a file in /etc/apt/sources.list.d directory
 echo "deb http://archive.getdeb.net/ubuntu wily-getdeb games" > /etc/apt/sources.list.d/games.list
+
+--------------------------------------------------------------------------------------------------
+
+# Finally, run the command "apt update" to update your Debian repo list.

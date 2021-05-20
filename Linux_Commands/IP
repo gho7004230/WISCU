@@ -1,0 +1,64 @@
+# The ip command is a powerful tool for configuring network interfaces that any Linux system administrator should know. 
+It is used to bring interfaces up or down, assign and remove addresses and routes, manage ARP cache, and much more.
+
+YOu can also review the ip man page by typing "man ip" in the command line or visiting the man web link at https://linux.die.net/man/8/ip
+
+The syntax for the ip command is as follows:
+
+ip [ OPTIONS ] OBJECT { COMMAND | help }
+
+----------------------------------------------------------------------------------------------------------------------
+# Display information about all IP addresses:
+
+ip addr show
+
+# If you want to display only IPv4 or IPv6 ip addresses, use:
+ip -4 addr
+ip -6 addr
+
+# Display information about a single network interface:
+
+ip addr show dev eth0
+----------------------------------------------------------------------------------------------------------------------
+# Assign IP addresses to an interface:
+
+sudo ip address add 192.168.121.45/24 dev eth0
+# or:
+sudo ip address add 192.168.121.45 255.255.255.0 eth0
+
+# Assign multiple IP addresses to an interface (subinterfaces):
+sudo ip address add 192.168.121.241/24 dev eth0
+sudo ip address add 192.168.121.45/24 dev eth0
+
+# To confirm the IPs are assigned type:
+ip -4 addr show dev eth0
+
+# Remove / Delete an IP address from the interface:
+sudo ip address del 192.168.121.45/24 dev eth0
+----------------------------------------------------------------------------------------------------------------------
+# Display information about network interfaces:
+ip link show dev eth0
+
+# Alter the status of the interface UP/DOWN:
+ip link set eth0 up
+ip link set eth0 down
+----------------------------------------------------------------------------------------------------------------------
+# Displaying and Altering the Routing Table:
+ip route list
+
+# To display only the routing for a specific network, for example, 172.17.0.0/16 you would type:
+ip r list 172.17.0.0/16
+
+# Add a new route:
+ip route add 192.168.121.0/24 via 192.168.121.1
+
+# Add a route to 192.168.121.0/24 that can be reached on device eth0:
+ip route add 192.168.121.0/24 dev eth0
+
+# To add a default route, use the keyword default. The following command will add a default route 
+  via the local gateway 192.168.121.1 that can be reached on device eth0:
+ip route add default via 192.168.121.1 dev eth0
+
+# Delete a route
+ip route del default
+ip route del 192.168.121.0/24 via 192.168.121.1

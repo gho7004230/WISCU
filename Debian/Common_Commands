@@ -15,6 +15,7 @@ http://linuxcommand.org/ - learn the command line
 #You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
 
 awk - Pattern-directed scanning and processing
+cat - Displays the contents of a file
 clear - Clear the terminal screen
 cmp - Compare two files
 comm - Compare two sorted files line by line

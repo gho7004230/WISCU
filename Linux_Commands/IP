@@ -21,7 +21,7 @@ ip -6 addr
 ip addr show dev eth0
 ----------------------------------------------------------------------------------------------------------------------
 # Assign IP addresses to an interface:
-
+                        **NOTE: This is non-persistent and will NOT survive a reboot; for persistent changes, you will need to modify the config file**
 sudo ip address add 192.168.121.45/24 dev eth0
 # or:
 sudo ip address add 192.168.121.45 255.255.255.0 eth0

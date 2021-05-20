@@ -1,2 +1,117 @@
-#Common Commands for Debian Distributions
+# Common Commands for Debian Distributions
 
+# For more fidelity into each core command, be sure to check out the man page for the corresponding command by typing "man {command}" or visit the Debian man website at https://manpages.debian.org/buster/
+
+# Additional Command Line Resources:
+https://www.bestsevenreviews.com/all-about-linux/ - An Overview of the Linux OS for Newbies
+http://linuxcommand.org/ - learn the command line
+
+
+# Common Shell Commands:
+# The GNU Core Utilities (coreutils) are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every UNIX-like operating system.  You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
+
+awk - pattern-directed scanning and processing language
+clear - clear the terminal screen
+cmp - Compare two files
+comm - Compare two sorted files line by line
+crontab - Schedule a command to run at a later time
+date - Display or change the date & time
+dc - Desk Calculator
+dd - Data Dump - Convert and copy a file
+df - Display free disk space
+diff - Display the differences between two files
+dir - Briefly list directory contents
+dircolors - Colour setup for ls
+dirname - Convert a full pathname to just a path
+du - Estimate file space usage
+eject - Eject CD-ROM
+env - Display, set, or remove environment variables
+exit - Exit the shell (or press Ctrl-D)
+export - Set an environment variable
+fdisk - Partition table manipulator for Linux
+file - Tells what kind of files are those listed on command line
+find - Search for files that meet a desired criteria
+for - Expand words, and execute commands
+format - Format disks or tapes
+free - Display memory usage
+fsck - Filesystem consistency check and repair.
+ftp - Transfer/receive files from/to a remote host
+grep, egrep, fgrep, rgrep - print lines that match patterns
+groups - Print group names a user is in
+gzip/gunzip - Compress or decompress named file(s)
+head - Output the first part of file(s)
+history - Command History
+hostname - Print or set system name
+id - Print user and group id's
+info - Help info
+join - Joins lines on a common field
+kill - Stops a process from running
+killall - Stops matching process from running
+less - Display output one screen at a time
+ln - Make links between files
+locate - Find files using an indexed list.
+logname - Print current login name
+logout - Exit a login shell
+lpc - Line printer control program
+lpr - Off line print
+lprint - Print a file
+lprintq - List the print queue
+ls - List information about file(s)
+man - Help manual
+mkdir - Create new folder(s)
+more - Display output one screen at a time
+mount - Mount a file system
+mv - Move or rename files or directories
+nice - Set the priority of a command or job
+passwd - Modify a user password
+printf - Format and print data
+ps - Process Status. Lists running process
+pwd - Print Working Directory
+rgrep - Recursive grep
+rm - Remove file(s)
+rmdir - Remove folder(s)
+rsync - Remote file copy (Synchronize file trees) using its own protocol. It may be used over an ssh or rsh connection.
+scp - Copy files between two machines over an ssh connection
+script - make typescript of terminal session
+sdiff - Merge two files interactively
+sed - Stream Editor
+select - Accept keyboard input
+sftp - Secure file transfer (FTP over SSH)
+shutdown - Shutdown or restart Linux
+sleep - Delay for a specified time
+sort - Sort text files
+ssh - Secure Shell
+su - Substitute user identity
+sync - Synchronize data on disk with memory
+tail - Output the last part of files
+tar - Tape Archiver
+time - Measure Program Resource Use
+top - List processes running on the system
+touch - Change file timestamps or create an empty file
+tr - Translate, squeeze, and/or delete characters
+traceroute - Trace Route to Host
+true - Do nothing, successfully
+umask - Users file creation mask
+umount - Unmount a device
+uname - Print system information
+uniq - Uniquify files
+until - Execute commands (until error)
+useradd - Create new user account
+usermod - Modify user account
+users - List users currently logged in
+vdir - Verbosely list directory contents (ls -l -b)
+watch - Execute/display a program periodically
+wc - Print byte, word and line counts
+which - Locate a program file in the user's path.
+who - Print all usernames currently logged in
+whoami - Print the current user id and name (`id -un')
+xargs - build and execute command lines from standard input
+
+# Miscellaneous Fun Commands:
+cmatrix
+hollywood
+sl
+fortunes
+bb
+filters
+tty-clock

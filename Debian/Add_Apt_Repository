@@ -1,0 +1,17 @@
+# Option 1 – Add Repository with add-apt-repository command:
+
+# Ubuntu 13.10/Debian 7 and Older Versions:
+sudo apt-get install python-software-properties
+
+# Ubuntu & Debian Latest Version
+sudo apt-get install software-properties-common
+
+#Then add the repo by it's url and reference directory and package folder
+add-apt-repository 'deb http://archive.getdeb.net/ubuntu wily-getdeb games'
+
+--------------------------------------------------------------------------------------------------
+
+# Option 2 – Add Repository with add-apt-repository using files:
+
+# Create a file in /etc/apt/sources.list.d directory
+echo "deb http://archive.getdeb.net/ubuntu wily-getdeb games" > /etc/apt/sources.list.d/games.list

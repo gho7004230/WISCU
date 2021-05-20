@@ -114,12 +114,3 @@ whoami - Print the current user id and name (`id -un')
 xargs - build and execute command lines from standard input
 yum - Yellow Dog Package Manager for installing rpm packages
 
-# Miscellaneous Fun Commands:
-cmatrix
-hollywood
-sl
-fortunes
-bb
-filters
-tty-clock
-

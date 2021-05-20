@@ -1,5 +1,6 @@
 #  Nearly all Linux distributions use a similar directory structure, and Linux distribution vendors have generally agreed on the naming and location of critical Linux files and directories.  A good knowledge of the Linux file system pays dividends to pretty much every system administrator. Because you have full control (through the root or super-user account), this cinformation is invaluable in keeping your system running smoothly and securely.
 
+
 / The root directory
 /bin Essential commands
 /boot Boot loader files, Linux kernel

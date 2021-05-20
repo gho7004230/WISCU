@@ -1,6 +1,7 @@
 # Common Commands for Debian Distributions
 
-# For more fidelity into each core command, be sure to check out the man page for the corresponding command by typing "man {command}" or visit the Debian man website at https://manpages.debian.org/buster/
+# For more fidelity into each core command, be sure to check out the man page for the corresponding command by typing "man {command}" or visit the Debian man website at 
+https://manpages.debian.org/buster/
 
 # Additional Command Line Resources:
 https://www.bestsevenreviews.com/all-about-linux/ - An Overview of the Linux OS for Newbies
@@ -8,7 +9,9 @@ http://linuxcommand.org/ - learn the command line
 
 
 # Common Shell Commands:
-# The GNU Core Utilities (coreutils) are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every UNIX-like operating system.  You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
+# The GNU Core Utilities (coreutils) are the basic file, shell and text manipulation utilities of the GNU operating system. 
+#These are the core utilities which are expected to exist on every UNIX-like operating system.  
+#You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
 
 awk - pattern-directed scanning and processing language
 clear - clear the terminal screen

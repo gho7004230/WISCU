@@ -14,6 +14,7 @@ http://linuxcommand.org/ - learn the command line
 #These are the core utilities which are expected to exist on every UNIX-like operating system.  
 #You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
 
+apt - Debian Package Manager for installing .deb packages
 awk - Pattern-directed scanning and processing
 cat - Displays the contents of a file
 clear - Clear the terminal screen
@@ -28,6 +29,7 @@ diff - Display the differences between two files
 dir - List directory contents
 dircolors - Color setup for ls
 dirname - Convert a full pathname to just a path
+dpkg - Debian package installer
 du - Estimate file space usage
 eject - Eject CD-ROM
 env - Display, set, or remove environment variables

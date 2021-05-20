@@ -13,36 +13,36 @@ http://linuxcommand.org/ - learn the command line
 #These are the core utilities which are expected to exist on every UNIX-like operating system.  
 #You should get a basic knowledge of how to list, display, edit and manipulate files before moving to more specific tasks.
 
-awk - pattern-directed scanning and processing language
-clear - clear the terminal screen
+awk - Pattern-directed scanning and processing
+clear - Clear the terminal screen
 cmp - Compare two files
 comm - Compare two sorted files line by line
-crontab - Schedule a command to run at a later time
+crontab - Schedule a command to run at a specified time
 date - Display or change the date & time
 dc - Desk Calculator
 dd - Data Dump - Convert and copy a file
 df - Display free disk space
 diff - Display the differences between two files
-dir - Briefly list directory contents
-dircolors - Colour setup for ls
+dir - List directory contents
+dircolors - Color setup for ls
 dirname - Convert a full pathname to just a path
 du - Estimate file space usage
 eject - Eject CD-ROM
 env - Display, set, or remove environment variables
 exit - Exit the shell (or press Ctrl-D)
 export - Set an environment variable
-fdisk - Partition table manipulator for Linux
+fdisk - Partition table application for Linux
 file - Tells what kind of files are those listed on command line
-find - Search for files that meet a desired criteria
+find - Search for files that meet a specific criteria
 for - Expand words, and execute commands
-format - Format disks or tapes
+format - Format disks
 free - Display memory usage
 fsck - Filesystem consistency check and repair.
 ftp - Transfer/receive files from/to a remote host
 grep, egrep, fgrep, rgrep - print lines that match patterns
 groups - Print group names a user is in
-gzip/gunzip - Compress or decompress named file(s)
-head - Output the first part of file(s)
+gzip/gunzip - Compress or decompress files
+head - Output the first part of file
 history - Command History
 hostname - Print or set system name
 id - Print user and group id's
@@ -59,9 +59,9 @@ lpc - Line printer control program
 lpr - Off line print
 lprint - Print a file
 lprintq - List the print queue
-ls - List information about file(s)
+ls - List information about file
 man - Help manual
-mkdir - Create new folder(s)
+mkdir - Create new folder
 more - Display output one screen at a time
 mount - Mount a file system
 mv - Move or rename files or directories
@@ -71,8 +71,8 @@ printf - Format and print data
 ps - Process Status. Lists running process
 pwd - Print Working Directory
 rgrep - Recursive grep
-rm - Remove file(s)
-rmdir - Remove folder(s)
+rm - Remove file
+rmdir - Remove folder
 rsync - Remote file copy (Synchronize file trees) using its own protocol. It may be used over an ssh or rsh connection.
 scp - Copy files between two machines over an ssh connection
 script - make typescript of terminal session

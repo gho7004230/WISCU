@@ -1,0 +1,23 @@
+#  Nearly all Linux distributions use a similar directory structure, and Linux distribution vendors have generally agreed on the naming and location of critical Linux files and directories.  A good knowledge of the Linux file system pays dividends to pretty much every system administrator. Because you have full control (through the root or super-user account), this cinformation is invaluable in keeping your system running smoothly and securely.
+
+/ The root directory
+/bin Essential commands
+/boot Boot loader files, Linux kernel
+/dev Device files
+/etc System configuration files
+/home User home directories
+/initrd Initial RAM disk boot support (used during boot time)
+/lib Shared libraries, kernel modules
+/lost+found Directory for recovered files (if found after a file system check)
+/media Mount point for removable media such as DVDs and floppy disks
+/mnt Usual mount point for local, remote file systems
+/opt Add-on software packages
+/proc Kernel information, process control
+/root Super-user (root home)
+/sbin System commands (mostly root only)
+/selinux Holds the data for SELinux, the security component of Fedora
+/sys Real-time information on devices used by the kernel
+/tftpboot Network boot support
+/tmp Temporary files
+/usr Secondary software file hierarchy
+/var Variable data (such as logs); spooled files

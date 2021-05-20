@@ -1,6 +1,7 @@
 # Common Commands for Debian Distributions
 
-# For more fidelity into each core command, be sure to check out the man page for the corresponding command by typing "man {command}" or visit the Debian man website at 
+# For more fidelity into each core command, be sure to check out the man page for the corresponding command by typing "man {command}", 
+or use the --help argument to see the command's available options, or visit the Debian man website at: 
 https://manpages.debian.org/buster/
 
 # Additional Command Line Resources:

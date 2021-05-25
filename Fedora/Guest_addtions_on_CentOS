@@ -1,0 +1,13 @@
+# Install VirtualBox Guest Additions on CentOS VM
+
+yum -y update
+yum -y install epel-release
+yum -y install make gcc kernel-headers kernel-devel perl dkms bzip2
+
+export KERN_DIR=/usr/src/kernels/$(uname -r)
+
+# Install GE ISO, Extract to folder, make VBoxLinuxAdditions.run executable
+
+chmod a+x VBoxLinuxAdditions.run
+
+./VBoxLinuxAdditions.run

@@ -1,4 +1,4 @@
-# Install VirtualBox Guest Additions on CentOS VM
+# Install VirtualBox Guest Additions on CentOS 8 VM
 
 yum -y update
 yum -y install epel-release
@@ -11,3 +11,5 @@ export KERN_DIR=/usr/src/kernels/$(uname -r)
 chmod a+x VBoxLinuxAdditions.run
 
 ./VBoxLinuxAdditions.run
+
+reboot now

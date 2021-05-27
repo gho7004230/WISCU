@@ -1,0 +1,12 @@
+# Install VirtualBox Guest Additions on RHEL 8 VM
+
+dnf -y update
+dnf install tar bzip2 kernel-devel-$(uname -r) kernel-headers perl gcc make elfutils-libelf-devel
+
+# Install GE ISO, Extract to folder (5.2.23 or higher), make VBoxLinuxAdditions.run executable
+
+chmod a+x VBoxLinuxAdditions.run
+
+./VBoxLinuxAdditions.run
+
+reboot now

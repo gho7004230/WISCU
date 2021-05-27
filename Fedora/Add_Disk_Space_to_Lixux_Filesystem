@@ -1,0 +1,52 @@
+# Scenario, you are running out of disk space on a Linux VM and need to increase the disk size.  
+# You shut done the VM and increase the disk size by 100GB in the Type 1 Hypervisor and reboot the VM
+# Now you need to extend the added space to the existing filesystem...
+
+# Look at the filesystem in huma readable terms
+df -h
+
+# List the block volumes
+lsblk
+
+# List the physical volumes
+pvdisplay
+
+# List the logical volumes
+lvdisplay
+
+# Evaluate free space on a logical volume
+parted /dev/nvme0n1 print free
+
+# Create new partition out of the free space
+fdisk /dev/nvme0n1
+# choose n
+# choose p
+# choose w
+
+# Now look to can see the new partition /dev/nvme0n1p4
+parted /dev/nvme0n1 print free
+# nvme0n1p4 will be available with the remaining disk space used
+
+# Create the new physical volume from the new partition /dev/nvme0n1p4
+pvcreate /dev/nvme0n1p4
+
+# Notice that there's no volume group (VG) designated for the new physical volume. 
+# Extend the same volume group from the original physical volume to cover the new physical volume.
+vgextend centos /dev/nvme0n1p4
+
+
+# Now because the space in the new physical volume is covered under the same volume group that all the existing 
+# logical volumes (like root and home) are under, we can extend those logical volumes with the additional space (growing the filesystem). 
+# Add 10GB to /dev/centos/home logical volume as an example.
+lvextend -L+10G /dev/centos/home
+
+# or give all of the free space to /home
+lvextend -l+100%FREE /dev/centos/home
+
+# Grow the filesystem for that logical volume so you can actually use the space on /dev/centos/home.
+xfs_growfs /dev/centos/home
+# on older Linux filesystems, use resize2fs /dev/centos/home
+
+# Verify new disk size
+df -h
+

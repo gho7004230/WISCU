@@ -1,0 +1,7 @@
+https://windowsreport.com/restore-missing-snmp-windows-10/
+
+From Powershell as Admin:
+Get-WindowsCapability -Online -Name “SNMP*”
+Add-WindowsCapability -Online -Name “SNMP.Client~~~~0.0.1.0”
+Get-WindowsCapability -Online -Name “SNMP*”
+services.msc shows SNMP enabled and running

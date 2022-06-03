@@ -1,0 +1,40 @@
+After initial install:
+1.) login as your user
+2.) Elevate to root
+$ su root
+4.) Check your $PATH to see if you have access to the superuser binaries
+# echo $PATH
+
+Expected result:
+/root/.local/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+If you do not see /usr/sbin in your PATH, then you will not be able to access the proper binaries, let's add /sbin:
+# export PATH=/sbin:/usr/sbin:$PATH
+re-verify PATH
+# echo $PATH
+
+Expected result:
+/root/.local/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/sbin:/usr/sbin
+
+5.) Update repo information
+# sudo apt update  
+(NOTE: Technically you do not have to use sudo as root, but you should get used to the practice now)
+
+6.) Install the following packages: build-essential, dkms, linux-headers
+# sudo apt install build-essential dkms linux-headers-$(uname -r)    
+(NOTE: uname -r pulls the Linux CPU architecture and outputs the result to a variable)
+
+7.) From the VirtualBox virtual machine menu, click Devices -> “Insert Guest Additions CD Image”
+
+8.) Mount the CD to the Linux Filesystem and navigate to the CD files
+# sudo mkdir -p /mnt/cdrom
+# sudo mount /dev/cdrom /mnt/cdrom
+# cd /mnt/cdrom
+
+9.) Execute the installer (.run) using the BASH Shell
+# sudo sh ./VBoxLinuxAdditions.run --nox11
+
+10.) Reboot the system
+# sudo shutdown -r now
+
+11.) Save this walkthrough to your GitHub account

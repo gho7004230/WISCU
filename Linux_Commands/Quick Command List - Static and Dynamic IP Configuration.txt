@@ -1,0 +1,58 @@
+Lab 1:
+
+1.) Elevate to root
+$ su - (enter root password)
+
+1a.) let's modify the suders file by appending a new line using the echo command, so we can sudo from your user account without using a password.
+# echo "{your user account} ALL=NOPASSWD: ALL" >> /etc/sudoers && exit
+
+2.) Use the ip address command to identify the name of the NIC and the IP address allocated to it.
+$ sudo ip address  (make note of the IP address of enp0s3)
+
+3.) Use the ip route command to find the address of the default gateway.
+$ sudo ip route
+
+4.) Skip step 4
+
+5.) Edit file /etc/network/interfaces
+$ sudo nano /etc/network/interfaces
+
+6.) Insert the following data to set up a static IP:
+Important: The static IP address must be on the same subnet as the current IP address.
+
+auto enp0s3 
+iface enp0s3 inet static 
+        address {another IP address from the same subnet} 
+        netmask 255.255.255.0
+        gateway {your subnet's default gateway}
+
+
+7.) Save and exit the file.
+
+
+8.) Use the /etc/init.d/networking stop command to stop the networking service.
+$ sudo /etc/init.d/networking stop
+
+9.) Use the sudo systemctl restart NetworkManager command to restart the NetworkManager daemon.
+$ sudo systemctl restart NetworkManager
+
+10.) Use the /etc/init.d/networking start command to start the networking service.
+$ sudo /etc/init.d/networking start
+
+11.) Use the ip address command to check if the new IP address you assigned is different than the previous IP address. Note that the IP address was changed to what you set in your static file.
+$ ip address
+
+12.) Use the command ping 8.8.8.8 to ping IP 8.8.8.8 and check the communication from the host to the world.
+Note: Use Ctrl + c to terminate the ping.
+$ ping 8.8.8.8
+
+13.) edit the interfaces file with nano and remove the static entry for enp0s3 from /etc/network/interfaces, then save and exit the file
+
+14.) Repeat Steps 8–10 and then restart the machine with systemctl reboot now
+$ sudo systemctl reboot now
+
+15.) After the machine has rebooted, open the terminal to run ping 8.8.8.8 and test connectivity again.
+
+DONE!
+
+
